@@ -18,7 +18,7 @@ You need to have SageMath installed to run these scripts. It can be downloaded f
 ### Estimating Costs with RP Algorithm
 
 For LPN: RP(m, n, t)
-For Regular LPN: regular-RP(m, n, t)
+For Regular LPN: RP_for_regular_LPN(m, n, t)
 
 ### Estimating Costs with Quick-RP Algorithm
 
