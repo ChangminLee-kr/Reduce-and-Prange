@@ -6,8 +6,7 @@ This repository contains implementations of algorithms to estimate the computati
 
 ## Files
 
-- **estimator (Reduce and Prange).sage**: Script for analyzing the costs associated with solving LPN and Regular LPN using the RP algorithm.
-- **Quick-RP.sage**: Script for faster estimations using the Quick-RP method.
+- **estimator (Reduce and Prange).sage**: Script for analyzing the costs associated with solving LPN and Regular LPN using the RP/Quick_RP algorithm and RSD for algebraic_RP algorithm.
 
 ## Installation
 
@@ -17,13 +16,18 @@ You need to have SageMath installed to run these scripts. It can be downloaded f
 
 ### Estimating Costs with RP Algorithm
 
-For LPN: RP(m, n, t)
-For Regular LPN: RP_for_regular_LPN(m, n, t)
+For LPN: Esti(m, n, t)
+For Regular LPN: Esti_for_regular_LPN(m, n, t)
 
 ### Estimating Costs with Quick-RP Algorithm
 
-For LPN: Esti_RP_fixed_level3(m, t, n)
-For Regular LPN: Esti_regularRP_fixed_level3(m, t, n)
+For LPN: Quick_RP(m, n, t)
+For Regular LPN: Quick_regular_RP(m, n, t)
+
+### Estimating Costs with Algebraic-RP Algorithm
+
+For LPN over binary field: RSD_algebraic_RP(m, n, t)
+
 
 
 ### Parameters
