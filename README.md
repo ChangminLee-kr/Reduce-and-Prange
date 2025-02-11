@@ -6,7 +6,8 @@ This repository contains implementations of algorithms to estimate the computati
 
 ## Files
 
-- **estimator (Reduce and Prange).sage**: Script for analyzing the costs associated with solving LPN and Regular LPN using the RP/Quick_RP algorithm and RSD for algebraic_RP algorithm.
+- **estimator (Reduce and Prange).sage**: Script for analyzing the costs associated with solving LPN and Regular LPN using the RP algorithm and RSD for algebraic_RP algorithm..
+- **Quick-RP.sage**: Script for faster estimations using the Quick-RP method.
 
 ## Installation
 
@@ -26,7 +27,8 @@ For Regular LPN: Quick_regular_RP(m, n, t)
 
 ### Estimating Costs with Algebraic-RP Algorithm
 
-For LPN over binary field: RSD_algebraic_RP(m, n, t)
+For RSD over binary field: RSD_for_high_degree_F2(m, n, t)
+For RSD : RSD_for_high_degree(m, n, t)
 
 
 
