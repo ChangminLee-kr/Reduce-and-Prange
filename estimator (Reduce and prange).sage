@@ -106,27 +106,6 @@ def RP(m,n,t):
 
 
 
-def Quick_RP(m,n,t):
-   N = [] 
-   Prob = []
-   Mu = []
-   #for i in range(4):
-   N = [ round(n/15*13), round(n/15*1), round(n/15*1)]
-   Mu += [N[0]]
-   Prob += [1/Pr(m,t,N[0])]
-   for i in range(2):
-      Mu += [Mu[i]+N[1+i]]
-      Prob += [ Prob[i]/Pr(m-Mu[i],t,N[1+i])]
-   cost = Con(m,t,N[0])/Pr(m,t,N[0])
-   for i in range(1):
-      cost += Con(m-Mu[i],t,N[1+i])*Prob[1+i]
-   cost += N[2]^2.8*Prob[2]
-   mit = RR(log(cost ,2)) 
-   return mit 
-
-
-
-
 
 def RP_for_regular_LPN(m,n,t):
 	b = t
@@ -205,27 +184,6 @@ def Esti_for_regular_LPN(m,n,b,k,initn,thrs):
 	mit = RR(log(cost ,2)) 
 	return mit , tempset
 
-
-
-
-def Quick_regular_RP(m, n, t):
-    b = t
-    k = ceil(m/b)
-    m = b*k
-    Prob = []
-    Mu = []
-    N = [round(n/15*13), round(n/15*1), round(n/15*1)]
-    Mu += [N[0]]
-    Prob += [1/Pr_for_regular_LPN(m, N[0], b, k)]
-    for i in range(2):
-        Mu += [Mu[i] + N[1 + i]]
-        Prob += [1/Pr_for_regular_LPN(m, Mu[1 + i], b, k)]
-    cost = Con(m, t, N[0]) / Pr_for_regular_LPN(m, N[0], b, k)
-    for i in range(2):
-        cost += Con(m - Mu[i], t, N[1 + i]) * Prob[1 + i]
-    cost += N[2] ^ 2.8 * Prob[2]
-    mit = RR(log(cost, 2))
-    return mit
 
 
 
