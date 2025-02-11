@@ -17,17 +17,17 @@ You need to have SageMath installed to run these scripts. It can be downloaded f
 
 ### Estimating Costs with RP Algorithm
 
-For LPN: Esti(m, n, t)
+For LPN: Esti(m, n, t), 
 For Regular LPN: Esti_for_regular_LPN(m, n, t)
 
 ### Estimating Costs with Quick-RP Algorithm
 
-For LPN: Quick_RP(m, n, t)
+For LPN: Quick_RP(m, n, t), 
 For Regular LPN: Quick_regular_RP(m, n, t)
 
 ### Estimating Costs with Algebraic-RP Algorithm
 
-For RSD over binary field: RSD_for_high_degree_F2(m, n, t)
+For RSD over binary field: RSD_for_high_degree_F2(m, n, t), 
 For RSD : RSD_for_high_degree(m, n, t)
 
 
