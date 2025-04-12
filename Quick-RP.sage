@@ -1,15 +1,6 @@
 ##### Probability function that all elements are zero when n-elements are sampled from m-elements with t non-zero entries  
 def Pr(m,t,n):
    return binomial( m-t ,n)/ binomial(m,n)
-##### Cost function for conversion that reduces LPN with m samples to LPN with m-n samples 
-def Con(m,t,n):
-   return (n^2.8+n^2*(m-n)+ n*(m-n)^2)
-
-def Conv(m, n):
-   return (n^2.8+n^2*(m-n)+ n*(m-n)^2)
-
-
-
 
 
 def Pr_for_regular_LPN(m,n,b,k):
@@ -20,6 +11,25 @@ def Pr_for_regular_LPN(m,n,b,k):
 	for i in range(n- b*l):
 		prob *= (1- 1/(k-l))
 	return prob
+
+
+##### Cost function for conversion that reduces LPN with m samples to LPN with m-n samples 
+def Con(m,t,n):
+   return (n^2.8+n^2*(m-n)+ n*(m-n)^2)
+
+def Conv(m, n):
+   return (n^2.8+n^2*(m-n)+ n*(m-n)^2)
+
+
+
+##### parameters
+## m : number of samples
+## n : dimension of the secret
+## t : number of nonzero entries
+## thrs : threshold value for each conversion 
+## initn : dimension, which will be reduced via the first conversion with thrs =1   
+##### Attack complexity with m,t,n,thrs. Here initn is set to reduce the cost in the first main loop.
+##### This algorithm outputs an attack complexity and each dimension used in the conversion.
 
 
 
