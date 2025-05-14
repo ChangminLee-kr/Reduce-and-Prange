@@ -57,15 +57,8 @@ def Esti(m,t,n,initn,thrs,top_level):
          lvl += 1
          tempn = 1
          tempsum += 1
-      #if tempn == 0:
-         #cost += ( max( n-tempsum,1)  )^(2.8)/Pr(m,t,n)/((1- 1/exp(1))^len(tempset))
-         #cost = cost/((1- 1/exp(1))^len(tempset))
-         #break
-   #print('test_tempsum=',tempsum)
    cost += ( (n-tempsum)^2.8+ (m-tempsum)*(n-tempsum))  / Pr(m, t , n ) /(1-1/e)^(top_level+1)
    mit = RR(log(cost ,2)) 
-   #if len(tempset)>6:
-   #   mit = infinity
    return mit , tempset
 
 
@@ -237,7 +230,6 @@ def RSD_for_high_degree_F2(m,n,t):
             print('temp_cmplx=', RR(temp_cmplx) )
             if temp_cmplx < cmplx:
                cmplx = temp_cmplx
-            #   print('i=',i)
    return RR(cmplx)
 
 
@@ -286,6 +278,5 @@ def RSD_for_high_degree(m,n,t):
             print('temp_cmplx=', RR(temp_cmplx) )
             if temp_cmplx < cmplx:
                cmplx = temp_cmplx
-            #   print('i=',i)
    return RR(cmplx)
 
